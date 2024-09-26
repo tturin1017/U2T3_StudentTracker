@@ -1,4 +1,4 @@
-
+package com.example.project;
 
 public class Student {
     // instance variables
@@ -38,7 +38,7 @@ public class Student {
     }
 
     public int getTestScoreCount(){
-        return s.testScoreCount;
+        return testScoreCount;
     }
 
     public int getGradYear(){

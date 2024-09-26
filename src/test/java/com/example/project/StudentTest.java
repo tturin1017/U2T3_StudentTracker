@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class TipCalculatorTest {
+public class StudentTest {
     @Test
     void testGetFirstName(){
         Student s = new Student("John", "Doe", 2025);
@@ -42,21 +42,21 @@ public class TipCalculatorTest {
     @Test
     void testSAddTestScore(){
         Student s = new Student("John", "Doe", 2025);
-        int test1 = s.addTestScore(91.5);
-        int test2 = s.addTestScore(95.6);
+        s.addTestScore(91.5);
+        s.addTestScore(95.6);
         List<Double> expectedOutput = new ArrayList<Double>();
         expectedOutput.add(2.0); // number of tests
         expectedOutput.add(95.6); //highest score test
         List<Double> studentOutput = new ArrayList<Double>();
-        studentOutput.add(s.getTestScoreCount());
+        studentOutput.add((double)s.getTestScoreCount());
         studentOutput.add(s.getHighestTestScore());
         assertEquals(expectedOutput,studentOutput);
     }
     @Test
     void testAverageTestScore(){
         Student s = new Student("John", "Doe", 2025);
-        int test1 = s.addTestScore(91.5);
-        int test2 = s.addTestScore(95.6);
+        s.addTestScore(91.5);
+        s.addTestScore(95.6);
         double expectedOutput = 93.55;
         double studentOutput = s.averageTestScore();
         assertEquals(expectedOutput,studentOutput);
@@ -66,9 +66,9 @@ public class TipCalculatorTest {
     @Test
     void testIsPassing(){
         Student s = new Student("John", "Doe", 2025);
-        int test1 = s.addTestScore(91.5);
-        int test2 = s.addTestScore(95.6);
-        doubel avg = s.averageTestScore();
+        s.addTestScore(91.5);
+        s.addTestScore(95.6);
+        double avg = s.averageTestScore();
         boolean expectedOutput = true;
         boolean studentOutput = s.isPassing();
         assertEquals(expectedOutput,studentOutput);
