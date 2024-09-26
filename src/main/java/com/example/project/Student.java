@@ -1,95 +1,82 @@
 package com.example.project;
 
 public class Student {
-    // instance variables
-    private String firstName;
-    private String lastName;
-    private int gradYear;
-    private double accumulatedTestScores; //should start at 0.0
-    private int testScoreCount; //should start at 0
-    private double highestTestScore; //should start at 0.0
- 
+    // instance variables for 
+    // first name (String)
+    // last name (String)
+    // graduation year (int)
+    // sum of test scores (double).. should initialize at 0.0
+    // test score count (int) ..should initialize at 0
+    // highest test score (double).. should initialize at 0.0
  
     // constructor
     public Student(String firstName, String lastName, int gradYear) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.gradYear = gradYear;
-        accumulatedTestScores = 0.0;
-        testScoreCount = 0;
-        highestTestScore = 0.0;
+        //implement code here!
+
     }
- 
  
     // returns firstName
     public String getFirstName() {
-        return firstName;
+        //implement code here!
+        return "";
     }
- 
  
     // returns lastName
     public String getLastName() {
-        return lastName;
+        //implement code here!
+        return "";
     }
  
- 
     public double getHighestTestScore() {
-        return highestTestScore;
+        //implement code here!
+        return 0.0;
     }
 
     public int getTestScoreCount(){
-        return testScoreCount;
+        //implement code here!
+        return 0;
     }
 
     public int getGradYear(){
-        return gradYear;
+        //implement code here!
+        return 0;
     }
- 
  
     // sets gradYear to newGradYear
     public void setGradYear(int newGradYear) {
-        gradYear = newGradYear;
+        //implement code here!
     }
- 
  
     // adds newTestScore to accumulatedTestScores
     // and increments testScoreCount by 1
+    // set new highest test score 
     public void addTestScore(double newTestScore) {
-        accumulatedTestScores += newTestScore;
-        testScoreCount++;
-        if (newTestScore > highestTestScore) {
-            highestTestScore = newTestScore;
-        }
+        //implement code here!
     }
- 
  
     // returns true if the student's average test score is greater
     // than or equal to 65; returns false otherwise (see Note 2 below)
     public boolean isPassing() {
-        if (averageTestScore() >= 65) {
-            return true;
-        } else {
-            return false;
-        }
+        //implement code here!
+        return false;
     }
- 
  
     // returns the Student's average test score as the
     // quotient of accumulatedTestScores and testScoreCount
     public double averageTestScore() {
-        double average = accumulatedTestScores / testScoreCount;
-        return average;
+        //implement code here!
+        return 0.0;
     }
  
- 
-    // this method prints all info of a Student object to the console
+    // this method prints all info of a Student object to the console 
+    // I AM NOT TESTING YOU ON THIS METHOD. IT'S FOR YOUR TESTING PURPOSES ONLY.. you don't have to use it
     public void printStudentInfo() {
-        System.out.println("Student Full Name: " + firstName + " " + lastName);
-        System.out.println("Graduation Year: " + gradYear);
-        System.out.println("Number of tests: " + testScoreCount);
-        System.out.println("Average Test Score: " + averageTestScore());
-        System.out.println("Highest Test Score: " + highestTestScore);
-        System.out.println("Is passing: " + isPassing());
+        System.out.println("Student Full Name: " );
+        System.out.println("Graduation Year: ");
+        System.out.println("Number of tests: ");
+        System.out.println("Average Test Score: ");
+        System.out.println("Highest Test Score: ");
+        System.out.println("Is passing: ");
     }
  }
  
