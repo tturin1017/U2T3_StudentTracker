@@ -55,17 +55,22 @@ public class TipCalculatorTest {
     @Test
     void testAverageTestScore(){
         Student s = new Student("John", "Doe", 2025);
-        s.setGradYear(2027);
-        int expectedOutput=2027;
-        int studentOutput=s.getGradYear();
+        int test1 = s.addTestScore(91.5);
+        int test2 = s.addTestScore(95.6);
+        double expectedOutput = 93.55;
+        double studentOutput = s.averageTestScore();
         assertEquals(expectedOutput,studentOutput);
     }
+
+
     @Test
     void testIsPassing(){
         Student s = new Student("John", "Doe", 2025);
-        s.setGradYear(2027);
-        int expectedOutput=2027;
-        int studentOutput=s.getGradYear();
+        int test1 = s.addTestScore(91.5);
+        int test2 = s.addTestScore(95.6);
+        doubel avg = s.averageTestScore();
+        boolean expectedOutput = true;
+        boolean studentOutput = s.isPassing();
         assertEquals(expectedOutput,studentOutput);
     }
 
